@@ -1,0 +1,232 @@
+/* global styles */
+body {
+	font-family: "Trebuchet MS", sans-serif;
+	color: #164c89; /* text color */
+	font-size: 18px;
+	/* css reset */
+	box-sizing: border-box;
+	margin: 0;
+}
+p,
+li,
+ul {
+	color: black;
+}
+.blue {
+	color: #164c89;
+}
+
+/* navbar styles */
+#navbar {
+	position: sticky;
+	top: 0;
+}
+nav {
+	background-color: #164c89;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 30px;
+}
+.right-nav-tabs {
+	display: flex;
+	gap: 64px;
+}
+
+nav a {
+	text-decoration: none;
+	color: #dfeafa; /* text color */
+
+	/* padding: 8px 8px;
+	margin: 4px; */
+	/* background-color: #c5d2e5;
+	border-radius: 8px;
+	transition: background-color 0.3s; */
+}
+
+nav a:hover {
+	/* background-color: #164c89;
+	color: #c5d2e5; */
+	color: white;
+}
+
+/* main content styles (non-navbar) */
+main {
+	padding: 30px 15vw;
+}
+
+/* put things as rows */
+.row {
+	display: flex;
+	justify-content: space-between; /* horizontally distribute items evenly */
+	align-items: center; /* vertically center items */
+	gap: 50px;
+}
+.col {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between; /* horizontally distribute items evenly */
+	align-items: center; /* vertically center items */
+}
+/* put icon links in a row */
+.icon-links {
+	display: flex;
+	justify-content: center;
+	/* justify-content: space-between; horizontally distribute items evenly */
+	gap: 50px;
+	padding: 20px;
+}
+
+/* center things horizontally */
+.center {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+/* don't let images be huge */
+img {
+	max-width: 100%;
+}
+
+/* display images in a circle */
+.pfp {
+	width: 280px;
+	height: 280px;
+	border-radius: 50%;
+}
+.img_circle {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+}
+
+/* display non-square images as circles */
+.img_wrapper {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	overflow: hidden;
+	flex-shrink: 0;
+	position: relative;
+}
+
+.img_wrapper img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* create scrollable image carousel */
+.img_carousel {
+	display: flex;
+	flex-wrap: nowrap; /* <<< don't wrap to next line */
+	gap: 10px;
+	overflow-x: auto; /* <<< scroll horizontally if too wide */
+	padding: 10px;
+	scroll-snap-type: x mandatory; /* optional, for smooth snapping */
+}
+
+/* other links (email, github, etc) */
+.links a,
+.links a:visited {
+	text-decoration: underline;
+	color: #164c89;
+}
+
+.links a:hover {
+	color: black;
+}
+
+/* individual links */
+.link,
+.link:visited {
+	text-decoration: underline;
+	color: #164c89;
+}
+
+.link:hover {
+	color: black;
+}
+
+/* back to projects carrot sizing */
+#back-to-projects {
+	/* font-size: 1em; same as p size */
+}
+#back-to-projects:hover {
+	cursor: pointer;
+	color: black;
+}
+.carrot {
+	font-size: 2.5em;
+	/* make it aligned with the text */
+	vertical-align: middle;
+	position: relative;
+	bottom: 0.1em;
+}
+
+/* project card styles */
+.cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+	grid-gap: 50px;
+}
+.project-card {
+	/* Add shadows to create the "card" effect */
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0 2px 4px 0 #164c89;
+	transition: 0.3s;
+	border-radius: 20px;
+	background-color: #dfeafa;
+	border: 2px solid #164c89;
+	padding: 30px;
+	height: min-content;
+}
+
+/* On mouse-over, add a deeper shadow */
+.project-card:hover {
+	box-shadow: 0 8px 16px 0 #164c89;
+}
+
+.cards a {
+	text-decoration: none;
+	color: inherit;
+}
+
+hr {
+	width: 100%;
+	border: 1px solid #164c89;
+}
+
+/* project overview card */
+.overview-card {
+	/* Add shadows to create the "card" effect */
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0 2px 4px 0 #164c89;
+	transition: 0.3s;
+	border-radius: 20px;
+	background-color: #dfeafa;
+	border: 2px solid #164c89;
+	padding: 30px;
+}
+
+/* change aspect ratio of iframe within */
+.swimmingly-poster-wrapper {
+	width: 100%;
+	aspect-ratio: 1 / 0.82; /* height = 82% of width */
+}
+
+/* overlay text over home image */
+.mountain-container {
+	position: relative;
+	text-align: center;
+	color: blue;
+}
+.overlay-text {
+	position: absolute;
+	top: 12%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+}
